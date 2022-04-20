@@ -4,6 +4,7 @@ import { Router } from 'express'
 
 dotenv.config();
 
+const PORT = process.env.PORT;
 const DATABASE_URL=process.env.DATABASE_URL;
 
 const router = Router();
@@ -16,12 +17,15 @@ router.get('/hello', (request, response) => {
   return response.json(res, null, 2)
 })
 
-router.get('/env', (request, response) => {
+router.get('/port', (request, response) => {
+  return response.json(PORT)
+})
 
+router.get('/env', (request, response) => {
   return response.json(DATABASE_URL)
 })
 
-const PORT = process.env.PORT
+
 
 const app = express();
 app.use(router);
