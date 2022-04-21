@@ -18,7 +18,7 @@ router.get('/hello', (request, response) => {
 })
 
 router.get('/port', (request, response) => {
-  const port = `Servidor is Running on POT :>> ${PORT}`
+  const port = `Servidor is Running on PORT :>> ${PORT}`
   return response.json(port)
 })
 
