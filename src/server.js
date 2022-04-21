@@ -18,11 +18,13 @@ router.get('/hello', (request, response) => {
 })
 
 router.get('/port', (request, response) => {
-  return response.json(PORT)
+  const port = `Servidor is Running on POT :>> ${PORT}`
+  return response.json(port)
 })
 
 router.get('/env', (request, response) => {
-  return response.json(DATABASE_URL)
+  const dbString = `Data Base Connection String :>> ${DATABASE_URL}`
+  return response.json(dbString)
 })
 
 
